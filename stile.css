@@ -80,14 +80,14 @@ body {
 }
 
 /* Стили для форм */
-input, select { 
+input, select, textarea { 
     padding: 8px; 
     margin: 5px 0; 
     width: 100%; 
     box-sizing: border-box; 
 }
 
-/* Исправленные стили для кнопок - теперь по центру */
+/* Стили для кнопок  */
 button { 
     padding: 10px 20px; 
     background: #4CAF50; 
@@ -95,8 +95,8 @@ button {
     border: none; 
     cursor: pointer; 
     margin: 5px 0;
-    width: 100%; /* Кнопки на всю ширину */
-    display: block; /* Блочный элемент */
+    width: 100%; 
+    display: block; 
     border-radius: 3px;
     font-size: 16px;
 }
@@ -105,7 +105,7 @@ button:hover {
     opacity: 0.9;
 }
 
-/* Стили для кнопок в формах обновления (они должны быть не на всю ширину) */
+/* Стили для кнопок в формах обновления */
 .update-form button, 
 .edit-name-form button {
     width: auto;
@@ -405,4 +405,23 @@ h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
+}
+
+/* Стили для текстового поля описания книги */
+.add-book textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-book textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }

@@ -201,20 +201,20 @@ if (isset($_GET['logout'])) {
             <p><strong>Email:</strong> <?php echo htmlspecialchars($auth['email'] ?? ''); ?></p>
         </div>
         
-        <div class="add-book">
-            <h3>➕ Добавить книгу</h3>
-            <form method="POST" enctype="multipart/form-data">
-                <input type="text" name="book_name" placeholder="Название книги" required>
-                <textarea name="description" placeholder="Описание книги (сюжет, впечатления, заметки...)" rows="4"></textarea>
-                <input type="file" name="book_image" accept="image/*">
-                <select name="status">
-                    <option value="Не прочитана">Не прочитана</option>
-                    <option value="В процессе">В процессе</option>
-                    <option value="Прочитана">Прочитана</option>
-                </select>
-                <button type="submit" name="add_book">Добавить книгу</button>
-            </form>
-        </div>
+<div class="add-book">
+    <h3>➕ Добавить книгу</h3>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="book_name" placeholder="Название книги" required>
+        <textarea name="description" placeholder="Описание книги (сюжет, впечатления, заметки....)" rows="4"></textarea>
+        <input type="file" name="book_image" accept="image/*">
+        <select name="status">
+            <option value="Не прочитана">Не прочитана</option>
+            <option value="В процессе">В процессе</option>
+            <option value="Прочитана">Прочитана</option>
+        </select>
+        <button type="submit" name="add_book">Добавить книгу</button>
+    </form>
+</div>
         
         <h2>Мои книги (<?php echo $booksCount; ?>)</h2>
         
@@ -253,7 +253,7 @@ if (isset($_GET['logout'])) {
                             <p style="margin: 10px 0 0 0; line-height: 1.6;"><?php echo nl2br(htmlspecialchars($book['description'])); ?></p>
                         </div>
                     <?php endif; ?>
-                    
+                
                     <div class="book-actions">
                         <form method="POST" class="update-form">
                             <input type="hidden" name="book_id" value="<?php echo $book['id']; ?>">
